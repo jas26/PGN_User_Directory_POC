@@ -23,8 +23,6 @@ namespace pgn_userprofile.Common
             _configuration = configuration;
             //string mysqlcon_string = _configuration.GetSection("MySql").GetSection("Connection_String").Value;
             //string tmp = _configuration.GetValue<string>("MySql:Connection_String");
-            //string mysqlcon_string = "server=127.0.0.1;uid=root;pwd=#welcome123;database=pgnmysql";
-            //var proj_path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location+ "pgn.db");
             //connection_string = $"Data Source={proj_path};Version=3;";
             //sqlite3con = new SQLiteConnection(connection_string);
             conn = new MySqlConnection();
