@@ -56,8 +56,6 @@
 /Users/jaswanth/Education/PGN/POC/PGN_User_Directory/PGN_User_Directory/obj/Debug/net7.0/PGN_User_Directory.pdb
 /Users/jaswanth/Education/PGN/POC/PGN_User_Directory/PGN_User_Directory/obj/Debug/net7.0/PGN_User_Directory.genruntimeconfig.cache
 /Users/jaswanth/Education/PGN/POC/PGN_User_Directory/PGN_User_Directory/obj/Debug/net7.0/ref/PGN_User_Directory.dll
-/Users/jaswanth/Education/PGN/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/bin/Debug/net7.0/Configuration/appsettings.Development.json
-/Users/jaswanth/Education/PGN/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/bin/Debug/net7.0/Configuration/appsettings.json
 /Users/jaswanth/Education/PGN/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/bin/Debug/net7.0/PGN_User_Directory
 /Users/jaswanth/Education/PGN/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/bin/Debug/net7.0/PGN_User_Directory.deps.json
 /Users/jaswanth/Education/PGN/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/bin/Debug/net7.0/PGN_User_Directory.runtimeconfig.json
@@ -113,3 +111,7 @@
 /Users/jaswanth/Education/PGN/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/obj/Debug/net7.0/PGN_User_Directory.pdb
 /Users/jaswanth/Education/PGN/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/obj/Debug/net7.0/PGN_User_Directory.genruntimeconfig.cache
 /Users/jaswanth/Education/PGN/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/obj/Debug/net7.0/ref/PGN_User_Directory.dll
+/Users/jaswanth/Education/PGN/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/bin/Debug/net7.0/Configuration/appsettings.Development.json
+/Users/jaswanth/Education/PGN/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/bin/Debug/net7.0/Configuration/appsettings.json
+/Users/jaswanth/Education/PGN/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/bin/Debug/net7.0/tmpappsettings.Development.json
+/Users/jaswanth/Education/PGN/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/bin/Debug/net7.0/tmpappsettings.json
