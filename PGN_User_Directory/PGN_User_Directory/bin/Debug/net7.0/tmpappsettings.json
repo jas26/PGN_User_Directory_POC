@@ -6,9 +6,6 @@
     }
   },
   "AllowedHosts": "*",
-  "Port": "8000",
-  "MySql": {
-    "Connection_String": "server=127.0.0.1;uid=root;pwd=#welcome123;database=pgnmysql"
-  }
+  "myPort": "8000"
 }
 

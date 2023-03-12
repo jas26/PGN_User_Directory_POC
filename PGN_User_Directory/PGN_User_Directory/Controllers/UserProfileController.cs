@@ -17,19 +17,26 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace pgn_userprofile.Controllers
 {
     [ApiController]
-    [Route("calci")]
+    [Route("pgn")]
     public class UserProfileController : Controller
     {
         DBOperations dBOperations;
-        public UserProfileController()
+        private IConfiguration _configuration;
+
+        public UserProfileController(IConfiguration configuration)
         {
-            dBOperations = new DBOperations();
+            _configuration = configuration;
+            //var port = _configuration.GetSection("myPort").Value;
+            dBOperations = new DBOperations(_configuration);
+            
+
         }
         [HttpPost("adduser")]
         public async Task<IActionResult> createuser([FromBody]UserModel usermodel)
         {
             try
             {
+                
                 var create_db_response = await dBOperations.Create(usermodel);
                 return Ok(create_db_response);
             }
