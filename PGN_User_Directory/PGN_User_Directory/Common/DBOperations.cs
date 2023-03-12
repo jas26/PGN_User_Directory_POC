@@ -16,16 +16,17 @@ namespace pgn_userprofile.Common
         //string connection_string;
         //SQLiteConnection sqlite3con;
         MySqlConnection conn;
+        private IConfiguration _configuration;
 
-        public DBOperations()
+        public DBOperations(IConfiguration configuration)
 		{
-            string mysqlcon_string = "server=127.0.0.1;uid=root;pwd=#welcome123;database=pgnmysql";
-            //var proj_path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location+ "pgn.db");
-            /////Users/jaswanth/Education/PGN/POC/PGN
+            _configuration = configuration;
+            //string mysqlcon_string = _configuration.GetSection("MySql").GetSection("Connection_String").Value;
+            //string tmp = _configuration.GetValue<string>("MySql:Connection_String");
             //connection_string = $"Data Source={proj_path};Version=3;";
             //sqlite3con = new SQLiteConnection(connection_string);
             conn = new MySqlConnection();
-            conn.ConnectionString = mysqlcon_string;
+            conn.ConnectionString = _configuration.GetSection("MySql").GetSection("Connection_String").Value;
 
 
         }
