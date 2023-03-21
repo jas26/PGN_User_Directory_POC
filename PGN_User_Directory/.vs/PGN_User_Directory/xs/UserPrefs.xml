@@ -4,14 +4,13 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="PGN_User_Directory/Common/PostgresDboperation.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PGN_User_Directory/Configuration/appsettings.json">
     <Files>
       <File FileName="PGN_User_Directory/Program.cs" />
-      <File FileName="PGN_User_Directory/Common/DBOperations.cs" />
-      <File FileName="PGN_User_Directory/Configuration/appsettings.json" />
-      <File FileName="PGN_User_Directory/Controllers/UserProfileController.cs" />
+      <File FileName="PGN_User_Directory/Configuration/appsettings.json" Line="11" Column="13" />
+      <File FileName="PGN_User_Directory/Controllers/UserProfileController.cs" Line="12" Column="33" />
       <File FileName="PGN_User_Directory/Common/MySqlDboperation.cs" />
-      <File FileName="PGN_User_Directory/Common/PostgresDboperation.cs" Line="29" Column="53" />
+      <File FileName="PGN_User_Directory/Common/PostgresDboperation.cs" Line="20" Column="65" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,7 +18,9 @@
           <Node name="PGN_User_Directory" expanded="True">
             <Node name="PGN_User_Directory" expanded="True">
               <Node name="Common" expanded="True" />
-              <Node name="Configuration" expanded="True" />
+              <Node name="Configuration" expanded="True">
+                <Node name="appsettings.json" selected="True" />
+              </Node>
               <Node name="Controllers" expanded="True" />
             </Node>
           </Node>

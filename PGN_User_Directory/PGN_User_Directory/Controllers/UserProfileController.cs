@@ -10,7 +10,6 @@ using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 using PGN_User_Directory.Common;
-using pgn_userprofile.Common;
 using pgn_userprofile.Model;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
