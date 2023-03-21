@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection;
 using System.Reflection.PortableExecutable;
 using System.Threading.Tasks;
 using System.Xml;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
+using PGN_User_Directory.Common;
 using pgn_userprofile.Common;
 using pgn_userprofile.Model;
 using static System.Runtime.InteropServices.JavaScript.JSType;
-
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace pgn_userprofile.Controllers
 {
@@ -20,24 +20,33 @@ namespace pgn_userprofile.Controllers
     [Route("pgn")]
     public class UserProfileController : Controller
     {
-        DBOperations dBOperations;
+        MySqlDboperation mySqlDboperation;
+        PostgresDboperation postgresDboperation;
         private IConfiguration _configuration;
+        private string currentDB;
 
         public UserProfileController(IConfiguration configuration)
         {
             _configuration = configuration;
-            //var port = _configuration.GetSection("myPort").Value;
-            dBOperations = new DBOperations(_configuration);
-            
+            mySqlDboperation = new MySqlDboperation(_configuration);
+            postgresDboperation = new PostgresDboperation(_configuration);
+            currentDB = _configuration.GetSection("PGNDB").Value;
 
         }
         [HttpPost("adduser")]
         public async Task<IActionResult> createuser([FromBody]UserModel usermodel)
         {
+            UserModel create_db_response;
             try
             {
-                
-                var create_db_response = await dBOperations.Create(usermodel);
+                if (currentDB == "MySql")
+                {
+                    create_db_response = await mySqlDboperation.Create(usermodel);
+                }
+                else
+                {
+                    create_db_response = await postgresDboperation.Create(usermodel);
+                }
                 return Ok(create_db_response);
             }
             catch(Exception ex)
@@ -50,13 +59,20 @@ namespace pgn_userprofile.Controllers
         [HttpGet("getuserdetails")]
         public async Task<IActionResult> getuserdetails([FromQuery] int userid)
         {
+            Dictionary<string, object> get_db_response;
             try
             {
-                var userdata = await dBOperations.getuserdetailsfromdb(userid);
-
-                if (userdata.Count() != 0)
+                if (currentDB == "MySql")
                 {
-                    return Ok(userdata);
+                    get_db_response = await mySqlDboperation.getuserdetailsfromdb(userid);
+                }
+                else
+                {
+                    get_db_response = await postgresDboperation.getuserdetailsfromdb(userid);
+                }
+                if (get_db_response.Count() != 0)
+                {
+                    return Ok(get_db_response);
                 }
                 else
                 {

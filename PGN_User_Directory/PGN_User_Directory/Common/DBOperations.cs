@@ -8,28 +8,52 @@ using MySql.Data.MySqlClient;
 //using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Data.SqlClient;
 using Newtonsoft.Json;
+using PGN_User_Directory.Common;
 
 namespace pgn_userprofile.Common
 {
-	public class DBOperations
-	{
+    public class DBOperations
+    {
         //string connection_string;
         //SQLiteConnection sqlite3con;
         MySqlConnection conn;
         private IConfiguration _configuration;
 
         public DBOperations(IConfiguration configuration)
-		{
+        {
             _configuration = configuration;
             //string mysqlcon_string = _configuration.GetSection("MySql").GetSection("Connection_String").Value;
             //string tmp = _configuration.GetValue<string>("MySql:Connection_String");
             //connection_string = $"Data Source={proj_path};Version=3;";
             //sqlite3con = new SQLiteConnection(connection_string);
             conn = new MySqlConnection();
-            conn.ConnectionString = _configuration.GetSection("MySql").GetSection("Connection_String").Value;
+            
 
 
         }
+
+        //public async Task<UserModel> NavigatetoDBoperations(UserModel userModel, string methodname)
+        //{
+
+        //    string currentDB = _configuration.GetSection("PGNDB").Value;
+        //    if(currentDB == "MySql")
+        //    {
+        //        MySqlDboperation mySqlDboperation = new MySqlDboperation(_configuration);
+        //        if(methodname == "create")
+        //        {
+        //            var response = mySqlDboperation.Create(userModel);
+        //        }
+        //        else
+        //        {
+        //            var response = mySqlDboperation.Create(userModel);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        PostgresDboperation postgresDboperation = new PostgresDboperation(_configuration);
+
+        //    }
+        //}
         public async Task<UserModel> Create(UserModel usermodel)
         {
 
@@ -43,7 +67,7 @@ namespace pgn_userprofile.Common
             //insertSQL.Parameters.Add(usermodel.username);
             //insertSQL.Parameters.Add(usermodel.location);
             try
-            {    
+            {
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 return usermodel;
@@ -59,7 +83,7 @@ namespace pgn_userprofile.Common
             MySqlDataReader reader;
             conn.Open();
 
-            var cmdString = "select * from user where userid =" + userid ;
+            var cmdString = "select * from user where userid =" + userid;
 
             MySqlCommand cmd = new MySqlCommand(cmdString, conn);
 
@@ -71,7 +95,7 @@ namespace pgn_userprofile.Common
             try
             {
                 reader = cmd.ExecuteReader();
-                
+
                 var userdata = dbvaluestojsonconvertor(reader);
                 conn.Close();
                 return userdata;
@@ -97,4 +121,3 @@ namespace pgn_userprofile.Common
         }
     }
 }
-
