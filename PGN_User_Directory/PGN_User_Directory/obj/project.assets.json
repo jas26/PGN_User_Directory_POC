@@ -2139,11 +2139,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jaswanth/Education/PGN/POC/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/PGN_User_Directory.csproj",
+      "projectUniqueName": "/Users/jaswanth/Downloads/tmp/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/PGN_User_Directory.csproj",
       "projectName": "PGN_User_Directory",
-      "projectPath": "/Users/jaswanth/Education/PGN/POC/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/PGN_User_Directory.csproj",
+      "projectPath": "/Users/jaswanth/Downloads/tmp/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/PGN_User_Directory.csproj",
       "packagesPath": "/Users/jaswanth/.nuget/packages/",
-      "outputPath": "/Users/jaswanth/Education/PGN/POC/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/obj/",
+      "outputPath": "/Users/jaswanth/Downloads/tmp/PGN_User_Directory_POC/PGN_User_Directory/PGN_User_Directory/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jaswanth/.nuget/NuGet/NuGet.Config"

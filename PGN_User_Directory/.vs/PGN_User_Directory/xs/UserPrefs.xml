@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{A25FCA99-ED89-43A8-A8A5-BBEB5DB8BBEA}|Default">
-  <MonoDevelop.Ide.ItemProperties.PGN__User__Directory PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
@@ -7,10 +7,10 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="PGN_User_Directory/Configuration/appsettings.json">
     <Files>
       <File FileName="PGN_User_Directory/Program.cs" />
-      <File FileName="PGN_User_Directory/Configuration/appsettings.json" Line="11" Column="13" />
-      <File FileName="PGN_User_Directory/Controllers/UserProfileController.cs" Line="12" Column="33" />
+      <File FileName="PGN_User_Directory/Configuration/appsettings.json" Line="12" Column="47" />
+      <File FileName="PGN_User_Directory/Controllers/UserProfileController.cs" />
       <File FileName="PGN_User_Directory/Common/MySqlDboperation.cs" />
-      <File FileName="PGN_User_Directory/Common/PostgresDboperation.cs" Line="20" Column="65" />
+      <File FileName="PGN_User_Directory/Common/PostgresDboperation.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -29,5 +29,5 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.PGN__User__Directory PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>
